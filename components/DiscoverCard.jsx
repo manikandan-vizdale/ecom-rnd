@@ -67,45 +67,59 @@ const DiscoverCard = () => {
     let msg = [...point];
 
     if (score[0] < 1500) {
-      msg[0] = msg[1] = 'Give combo offers, Bundle offers, Discount on high value orders';
+      msg[0].answer = msg[1].answer = 'Give combo offers, Bundle offers, Discount on high value orders';
+      msg[0].flag = msg[1].flag = 0
     } else {
-      msg[0] = msg[1] = 'Good!';
+      msg[0].answer = msg[1].answer = 'Good!';
+      msg[0].flag = msg[1].flag = 1;
     }
 
     if (score[2] < 20) {
-      msg[2] = msg[3] = 'There is a decline in revenue, Critical';
+      msg[2].answer = msg[3].answer = 'There is a decline in revenue, Critical';
+      msg[2].flag = msg[3].flag = 0;
     } else {
-      msg[2] = msg[3] = 'Good!';
+      msg[2].answer = msg[3].answer = 'Good!';
+      msg[2].flag = msg[3].flag = 1;
     }
 
     if (score[4] > 6000) {
-      msg[4] = msg[5] = 'Reduce cost of marketing, choose different customer base';
+      msg[4].answer = msg[5].answer = 'Reduce cost of marketing, choose different customer base';
+      msg[4].flag = msg[5].flag = 0;
     } else {
-      msg[4] = msg[5] = 'Good!';
+      msg[4].answer = msg[5].answer = 'Good!';
+      msg[4].flag = msg[5].flag = 1;
     }
 
     if (score[6] < 8000) {
-      msg[6] = msg[7] = msg[8] = 'Select best customers, target good one';
+      msg[6].answer = msg[7].answer = msg[8].answer = 'Select best customers, target good one';
+      msg[6].flag = msg[7].flag = msg[8].flag = 0;
     } else {
-      msg[6] = msg[7] = msg[8] = 'Good customer base!';
+      msg[6].answer = msg[7].answer = msg[8].answer = 'Good customer base!';
+      msg[6].flag = msg[7].flag = msg[8].flag = 1;
     }
 
     if (score[9] > 40) {
-      msg[9] = msg[10] = 'Sign of customer dissatisfaction, Increase customer support. Increase customer experience. Get feedbacks often';
+      msg[9].answer = msg[10].answer = 'Sign of customer dissatisfaction, Increase customer support. Increase customer experience. Get feedbacks often';
+      msg[9].flag = msg[10].flag = 0;
     } else {
-      msg[9] = msg[10] = 'Good, Better customer retention!';
+      msg[9].answer = msg[10].answer = 'Good, Better customer retention!';
+      msg[9].flag = msg[10].flag = 1;
     }
 
     if (score[11] < 20) {
-      msg[11] = 'Sign of customer dissatisfaction, Increase customer support. Increase customer experience. Get feedbacks often';
+      msg[11].answer = 'Sign of customer dissatisfaction, Increase customer support. Increase customer experience. Get feedbacks often';
+      msg[11].flag = 0;
     } else {
-      msg[11] = 'Good, Better customer retention!';
+      msg[11].answer = 'Good, Better customer retention!';
+      msg[11].flag = 1;
     }
 
     if (score[12] < 20) {
-      msg[12] = msg[13] = 'Try to make repeated purchase plans';
+      msg[12].answer = msg[13].answer = 'Try to make repeated purchase plans';
+      msg[12].flag = msg[13].flag = 0;
     } else {
-      msg[12] = msg[13] = 'Good, Better customer satisfaction!';
+      msg[12].answer = msg[13].answer = 'Good, Better customer satisfaction!';
+      msg[12].flag = msg[13].flag = 1;
     }
 
     setPoint(msg);
